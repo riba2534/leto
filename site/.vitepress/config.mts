@@ -35,7 +35,7 @@ export default defineConfig({
     sidebar: generateSidebar(),
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/hepengcheng/leto' },
+      { icon: 'github', link: 'https://github.com/riba2534/leto' },
     ],
 
     search: {
