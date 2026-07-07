@@ -39,6 +39,27 @@ export function generateSidebar() {
 
     if (!existsSync(bookDir)) continue
 
+    // 合集书籍：多本各自独立的子书
+    if (book.subBooks) {
+      for (const sub of book.subBooks) {
+        const subDir = join(bookDir, sub.slug)
+        const items = scanDir(subDir, book.slug, `${sub.slug}/`)
+        const collapsed = items.length > 30
+
+        sidebar[`/books/${book.slug}/${sub.slug}/`] = [
+          {
+            text: sub.title,
+            collapsed,
+            items: [
+              { text: '📖 书籍简介', link: `/books/${book.slug}/${sub.slug}/` },
+              ...items,
+            ],
+          },
+        ]
+      }
+      continue
+    }
+
     // 双语书籍：en/ 和 zh/ 子目录
     if (book.bilingual) {
       const enDir = join(bookDir, 'en')

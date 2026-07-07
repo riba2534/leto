@@ -1,3 +1,14 @@
+export interface SubBookMeta {
+  slug: string
+  title: string
+  subtitle?: string
+  author?: string
+  translator?: string
+  intro: string
+  year?: number
+  pages?: number
+}
+
 export interface BookMeta {
   slug: string
   title: string
@@ -10,6 +21,7 @@ export interface BookMeta {
   pages?: number
   zhTitle?: string
   bilingual?: boolean
+  subBooks?: SubBookMeta[]
 }
 
 export const books: BookMeta[] = [
@@ -40,11 +52,40 @@ export const books: BookMeta[] = [
     title: '彼得·林奇投资经典全集',
     subtitle: '彼得林奇的成功投资·战胜华尔街·彼得林奇教你理财',
     author: '彼得·林奇 (Peter Lynch)',
-    translator: '宁三江、罗志芳、刘建位、徐晓杰 译',
+    translator: '宋三江、罗志芳、刘建位、徐晓杰 译',
     cover: '/covers/peter-lynch-collection.jpg',
-    intro: '华尔街传奇基金经理彼得·林奇的三部经典著作合集，散户战胜机构的投资方法论。',
+    intro: '华尔街传奇基金经理彼得·林奇的三部经典著作合集，散户战胜机构的投资方法论。全集收录三本各自独立成书的经典著作，可任选一本单独阅读。',
     year: 2018,
     pages: 800,
+    subBooks: [
+      {
+        slug: 'beating-the-street',
+        title: '战胜华尔街',
+        subtitle: 'Beating the Street（珍藏版）',
+        author: '彼得·林奇 (Peter Lynch)、约翰·罗瑟查尔德 (John Rothchild)',
+        translator: '刘建位、徐晓杰 等译',
+        intro: '林奇复盘自己执掌麦哲伦基金13年间的选股实录，按早期、中期、晚期回顾具体持仓案例，并总结出著名的"25条股票投资黄金法则"。',
+        year: 1993,
+      },
+      {
+        slug: 'learn-to-earn',
+        title: '彼得·林奇教你理财',
+        subtitle: "Learn to Earn: A Beginner's Guide to the Basics of Investing and Business",
+        author: '彼得·林奇 (Peter Lynch)、约翰·罗瑟查尔德 (John Rothchild)',
+        translator: '宋三江、罗志芳 译',
+        intro: '面向投资入门者的通识读本，从美国股市两百年历史讲起，系统讲解股票、基金与公司生命周期的基本原理。',
+        year: 1995,
+      },
+      {
+        slug: 'one-up-on-wall-street',
+        title: '彼得·林奇的成功投资',
+        subtitle: '珍藏版 · One Up on Wall Street',
+        author: '彼得·林奇 (Peter Lynch)、约翰·罗瑟查尔德 (John Rothchild)',
+        translator: '刘建位、徐晓杰 译',
+        intro: '彼得·林奇的成名代表作，提出"业余投资者比专业投资者更有优势"的核心理念，教你如何用日常生活经验挖掘十倍股。',
+        year: 1989,
+      },
+    ],
   },
   {
     slug: 'options-strategies',
