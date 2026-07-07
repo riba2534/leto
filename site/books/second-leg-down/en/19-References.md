@@ -3,7 +3,7 @@
 1. Ane, T., and H. Geman. (2000). “Order Flow, Transaction Clock and Normality of Asset Returns.” The Journal of Finance 55 (5) 2259–2284 (October).
 1. Armantier, O., E. Ghysels, A. Sarkar and J. Shrader. (2015). Discount Window Stigma during the 2007–2008 Financial Crisis. Federal Reserve Bank of New York Staff Report 483 (August).
 1. Bailey, D., and M. de Prado. (2014). “The Deflated Sharpe Ratio: Correcting for Selection Bias, Backtest Overfitting and Non-Normality.” The Journal of Portfolio Management 40 (5) 94–107 (40th anniversary special issue).
-1. Beran, J. (1994). “Statistics for Long-Term Memory Processes”. Chapman&Hall/CRC Press Monographs on Statistics & Applied Probability 61, Boca Raton, Florida.
+1. Beran, J. (1994). “Statistics for Long-Term Memory Processes”. Chapman & Hall/CRC Press Monographs on Statistics & Applied Probability 61, Boca Raton, Florida.
 1. Black, F., and R. Litterman. (1990). Asset Allocation: Combining Investor Views with Market Equilibrium. Goldman Sachs and Co. Fixed Income Research Report (September).
 1. Bollerslev, T. (1986). “Generalized Autoregressive Conditional Heteroskedasticity.” Journal of Econometrics 31 307–327.
 1. Bouchaud, J. (2009). Price Impact. Preprint. (arXiv:0903.2428v1)
@@ -21,7 +21,7 @@
 1. Gangopadhyay, K. (2013). “Interview with Eugene H. Stanley.” IIM Kozhikode Society & Management Review 2 (2) 73–78.
 1. Gatheral, J. (2006). The Volatility Surface: A Practitioner's Guide. John Wiley and Sons, Inc., Hoboken, New Jersey.
 1. Gopikrishnan, P., V. Plerou, L. Nunes Amaral, M. Meyer and H. Stanley. (1999). “Scaling of the distribution of fluctuations of financial market indices.” Physical Review E 60 (5) 5305–5316.
-1. Graham, B. (1949). The Intelligent Investor. Harper&Brothers, New York.
+1. Graham, B. (1949). The Intelligent Investor. Harper & Brothers, New York.
 1. Gray, W. (2014). Are You Trying Too Hard? Preprint.
 1. Greyserman, A., and K. Kaminski. (2014). Trend Following with Managed Futures: The Search for Crisis Alpha. John Wiley and Sons, Inc., Hoboken, New Jersey.
 1. Haug, E., and N. Taleb. (2007). Why We Have Never Used the Black-Scholes-Merton Option Pricing Formula. Preprint (3rd version).

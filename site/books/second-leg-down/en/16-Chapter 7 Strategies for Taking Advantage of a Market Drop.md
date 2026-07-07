@@ -153,7 +153,12 @@ Table 7.1 summarises our results.
 
 Table 7.1 Standard deviation has the tightest sampling distribution
 
-| Empirical Standard Deviation of Sampling Distribution || --- || Mean |  || Standard deviation |  || Skewness |  || Kurtosis |  |
+| Empirical Standard Deviation of Sampling Distribution | |
+| --- | --- |
+| Mean | 6.26×10⁻⁴ |
+| Standard deviation | 4.50×10⁻⁴ |
+| Skewness | 2.41×10⁻¹ |
+| Kurtosis | 4.78×10⁻¹ |
 
 We can see that the standard deviation (square root of the second moment) varies the least across simulations. To be fair, the sampling distribution of the mean is nearly as tight as that of the standard deviation. However, the standard deviation in a typical simulation is over 10 times larger in magnitude than the mean. This suggests that, in relative terms, standard deviation stays in a very tight range across simulations. It's somewhat surprising that the second moment is more well-behaved than the first, third or any higher central moment. As it turns out, volatility is not only the easiest moment to measure, but also the easiest to predict. This is true in relative terms, at least. Volatility has a tendency to mean-revert whenever it becomes particularly stretched. We can express this idea in rough but intuitive terms. Barring a collapse, it's unlikely that the S&P 500 will trade at its average level over the last 20 years (roughly 1270 as of February 2016) in the near future. However, most of us would expect the VIX to intersect its long-term average value on a fairly regular basis. In 2015 alone, the VIX crossed its 20-year trailing average 6 times (using daily data).
 

@@ -33,9 +33,9 @@ Under the following assumptions, we can sketch the price impact function. The th
 - If a 10,000 lot goes through the market, its price impact will be around 0.3% of the index level, i.e. 6 points if the futures are at 2000.
 - The volatility of the contract is 15%.
 
-The third assumption allows us to solve for  in the price impact function
-![equation](../images/c08-disp-0001.png)<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" overflow="scroll"><mrow><mi>&#x30c3;</mi><mfrac><mrow><msqrt><mi>S</mi></msqrt></mrow><mrow><mn>2</mn><mi>C</mi></mrow></mfrac></mrow></math>
-where  is the volatility of the index and the trade size  is set as a percentage of daily trading volume.
+The third assumption allows us to solve for C in the price impact function
+![equation](../images/c08-disp-0001.png)
+where σ is the volatility of the index and the trade size S is set as a percentage of daily trading volume.
 
 We can break up 5% of daily trading volume in a number of ways, 100 trades of 1,000 lots, 50 trades of 2,000 lots and so on. If the trades are all buys or sells, we end up with an impact curve as in Figure 8.1.
 ![Image described by caption and surrounding text.](../images/c08f001.jpg)
