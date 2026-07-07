@@ -57,5 +57,5 @@ import { books } from './.vitepress/books'
 </div>
 
 <div style="max-width: 1152px; margin: 48px auto 24px; padding: 0 24px; text-align: center; color: var(--vp-c-text-2); font-size: 14px; line-height: 1.8;">
-  <p>本站收录的书籍均来自 <a href="https://x.com/leto_bao" target="_blank">Leto</a>（<a href="https://x.com/leto_bao" target="_blank">@leto_bao</a>）的投资推荐书单。建议按「持续买入 → 生命周期投资法 → 彼得·林奇投资经典 → 期权投资策略 → The Second Leg Down」的顺序阅读，由浅入深构建投资框架。<br>本站内容仅供学习交流，版权归原作者所有。如有侵权，请联系删除。</p>
+  <p>本站收录的书籍均来自 <a href="https://x.com/leto_bao" target="_blank">Leto</a>（<a href="https://x.com/leto_bao" target="_blank">@leto_bao</a>）的投资推荐书单。建议按「持续买入 → 生命周期投资法 → 彼得·林奇投资经典 → 期权投资策略 → The Second Leg Down → 避风港」的顺序阅读，由浅入深构建投资框架。<br>本站内容仅供学习交流，版权归原作者所有。如有侵权，请联系删除。</p>
 </div>

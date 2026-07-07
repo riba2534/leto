@@ -26,8 +26,9 @@
 | **彼得·林奇投资经典全集** | 彼得·林奇 (Peter Lynch) | 三部曲合集——战胜华尔街 · 彼得·林奇教你理财 · 彼得·林奇的成功投资，各自独立成书、可单独阅读 | [阅读](https://leto.fate.red/books/peter-lynch-collection/) |
 | **期权投资策略**（原书第 5 版） | 劳伦斯·G·麦克米伦 (Lawrence G. McMillan) | 期权交易领域的权威百科全书 | [阅读](https://leto.fate.red/books/options-strategies/) |
 | **The Second Leg Down**（第二轮下跌） | Hari P. Krishnan | 市场恐慌时期的交易与对冲策略，🌐 提供完整中文翻译 | [阅读](https://leto.fate.red/books/second-leg-down/) |
+| **避风港：金融风暴中的安全投资** | 马克·斯皮茨纳格尔 (Mark Spitznagel) | 具有成本效益的尾部风险对冲心法，纳西姆·尼古拉斯·塔勒布作序推荐 | [阅读](https://leto.fate.red/books/safe-haven/) |
 
-> 💡 建议阅读顺序：持续买入 → 生命周期投资法 → 彼得·林奇投资经典 → 期权投资策略 → The Second Leg Down。由浅入深，构建完整的投资认知框架。
+> 💡 建议阅读顺序：持续买入 → 生命周期投资法 → 彼得·林奇投资经典 → 期权投资策略 → The Second Leg Down → 避风港。由浅入深，构建完整的投资认知框架。
 
 ## ✨ 站点功能
 

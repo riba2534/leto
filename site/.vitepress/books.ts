@@ -110,4 +110,14 @@ export const books: BookMeta[] = [
     zhTitle: '第二轮下跌',
     bilingual: true,
   },
+  {
+    slug: 'safe-haven',
+    title: '避风港',
+    subtitle: '金融风暴中的安全投资',
+    author: '马克·斯皮茨纳格尔 (Mark Spitznagel)',
+    translator: '江生、于华 译',
+    cover: '/covers/safe-haven.jpg',
+    intro: '黑天鹅基金经理斯皮茨纳格尔的尾部风险对冲心法：用几何平均数而非算术平均数重新理解风险，教你识别真正具有成本效益的"避风港"资产，而非自欺欺人的伪避险。纳西姆·尼古拉斯·塔勒布作序推荐。',
+    year: 2023,
+  },
 ]
