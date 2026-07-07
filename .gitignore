@@ -9,6 +9,9 @@ site/.vitepress/.temp/
 # 工作中间文件
 work/
 
+# 生成的 PDF（太大不入库）
+pdfs/
+
 # 原始书籍（太大不入库）
 leto_raw/
 

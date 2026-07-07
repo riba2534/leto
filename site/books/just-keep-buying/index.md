@@ -3,18 +3,28 @@ title: 持续买入
 author: 尼克·马吉奥利 (Nick Maggiulli)
 ---
 
-::: tip 书籍信息
-- **书名**: 持续买入
-- **副标题**: 普通人投资致富的实证方法
-- **作者**: 尼克·马吉奥利 (Nick Maggiulli)
-- **译者**: 阿加嘉 译
-:::
+<script setup>
+import { books } from '../../.vitepress/books'
 
-# 持续买入
+const book = books.find(b => b.slug === 'just-keep-buying')
+</script>
 
-普通人投资致富的实证方法
-
-用数据说话，证明持续买入并持有是普通人最可靠的投资致富路径。
+<div class="book-header">
+  <div class="book-header__cover">
+    <img :src="book.cover" :alt="book.title" />
+  </div>
+  <div class="book-header__info">
+    <h1 class="book-header__title">{{ book.title }}</h1>
+    <p v-if="book.subtitle" class="book-header__subtitle">{{ book.subtitle }}</p>
+    <div class="book-header__meta">
+      <p><strong>作者：</strong>{{ book.author }}</p>
+      <p v-if="book.translator"><strong>译者：</strong>{{ book.translator }}</p>
+      <p v-if="book.year"><strong>出版年份：</strong>{{ book.year }}</p>
+      <p v-if="book.pages"><strong>页数：</strong>{{ book.pages }} 页</p>
+    </div>
+    <p class="book-header__intro">{{ book.intro }}</p>
+  </div>
+</div>
 
 ## 目录
 

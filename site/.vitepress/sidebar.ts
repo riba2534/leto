@@ -2,6 +2,35 @@ import { readdirSync, readFileSync, existsSync } from 'fs'
 import { resolve, join } from 'path'
 import { books } from './books'
 
+function scanDir(dir: string, slug: string, langPrefix: string) {
+  if (!existsSync(dir)) return []
+
+  const files = readdirSync(dir)
+    .filter(f => f.endsWith('.md') && f !== 'index.md')
+    .sort((a, b) => {
+      const aNum = parseInt(a.match(/^(\d+)/)?.[1] || '0')
+      const bNum = parseInt(b.match(/^(\d+)/)?.[1] || '0')
+      return aNum - bNum
+    })
+
+  return files.map(f => {
+    const filePath = join(dir, f)
+    const content = readFileSync(filePath, 'utf-8')
+
+    let title = f.replace(/^\d+-/, '').replace(/\.md$/, '')
+    const h1Match = content.match(/^#\s+(.+)$/m)
+    if (h1Match) {
+      title = h1Match[1].trim()
+    }
+
+    const slugName = f.replace(/\.md$/, '')
+    return {
+      text: title.length > 30 ? title.slice(0, 30) + '…' : title,
+      link: `/books/${slug}/${langPrefix}${slugName}`,
+    }
+  })
+}
+
 export function generateSidebar() {
   const sidebar: Record<string, any> = {}
 
@@ -10,41 +39,55 @@ export function generateSidebar() {
 
     if (!existsSync(bookDir)) continue
 
-    const files = readdirSync(bookDir)
-      .filter(f => f.endsWith('.md') && f !== 'index.md')
-      .sort((a, b) => {
-        // 按数字前缀排序
-        const aNum = parseInt(a.match(/^(\d+)/)?.[1] || '0')
-        const bNum = parseInt(b.match(/^(\d+)/)?.[1] || '0')
-        return aNum - bNum
-      })
+    // 双语书籍：en/ 和 zh/ 子目录
+    if (book.bilingual) {
+      const enDir = join(bookDir, 'en')
+      const zhDir = join(bookDir, 'zh')
 
-    const items = files.map(f => {
-      const filePath = join(bookDir, f)
-      const content = readFileSync(filePath, 'utf-8')
+      const enItems = scanDir(enDir, book.slug, 'en/')
+      const zhItems = scanDir(zhDir, book.slug, 'zh/')
 
-      // 尝试从第一个 H1 提取标题
-      let title = f.replace(/^\d+-/, '').replace(/\.md$/, '')
-      const h1Match = content.match(/^#\s+(.+)$/m)
-      if (h1Match) {
-        title = h1Match[1].trim()
-      }
+      const collapsed = (enItems.length || zhItems.length) > 30
 
-      return {
-        text: title.length > 30 ? title.slice(0, 30) + '…' : title,
-        link: `/books/${book.slug}/${f.replace(/\.md$/, '')}`,
-      }
-    })
+      // 英文 sidebar
+      sidebar[`/books/${book.slug}/en/`] = [
+        {
+          text: `${book.title} (EN)`,
+          collapsed,
+          items: [
+            { text: '📖 书籍简介', link: `/books/${book.slug}/` },
+            ...enItems,
+          ],
+        },
+      ]
 
-    sidebar[`/books/${book.slug}/`] = [
-      {
-        text: book.title,
-        items: [
-          { text: '📖 书籍简介', link: `/books/${book.slug}/` },
-          ...items,
-        ],
-      },
-    ]
+      // 中文 sidebar
+      sidebar[`/books/${book.slug}/zh/`] = [
+        {
+          text: `${book.zhTitle || book.title} (中文)`,
+          collapsed,
+          items: [
+            { text: '📖 书籍简介', link: `/books/${book.slug}/` },
+            ...zhItems,
+          ],
+        },
+      ]
+    } else {
+      // 单语书籍：原逻辑
+      const items = scanDir(bookDir, book.slug, '')
+      const collapsed = items.length > 30
+
+      sidebar[`/books/${book.slug}/`] = [
+        {
+          text: book.title,
+          collapsed,
+          items: [
+            { text: '📖 书籍简介', link: `/books/${book.slug}/` },
+            ...items,
+          ],
+        },
+      ]
+    }
   }
 
   return sidebar

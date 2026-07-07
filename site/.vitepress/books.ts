@@ -8,6 +8,8 @@ export interface BookMeta {
   intro: string
   year?: number
   pages?: number
+  zhTitle?: string
+  bilingual?: boolean
 }
 
 export const books: BookMeta[] = [
@@ -64,5 +66,7 @@ export const books: BookMeta[] = [
     intro: '深入解析市场恐慌时期的交易与对冲策略，教你在极端行情中保护资产并捕捉机会。',
     year: 2017,
     pages: 320,
+    zhTitle: '第二轮下跌',
+    bilingual: true,
   },
 ]

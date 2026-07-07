@@ -1,4 +1,4 @@
-# Chapter 1Introduction
+# Chapter 1: Introduction
 
 Finance is full of colourful stories and the most exciting ones tend to involve someone on the verge of collapse. We feel a mix of thrill and schadenfreude when we read about the traders who blew up or the elite hedge funds that had to liquidate after failing to meet their margin calls. In a moment of panic, investors can do the strangest things and this can make for great theatre. Arrogance and overconfidence are punished by the markets, which seem to have a life force of their own. Many shrewd investors have completely lost their way in a moment of crisis. There are numerous stories of portfolio managers who have patiently extracted profits from the markets for years, then had a large and unexpected loss. It might have been advisable for them to exit the position (“cutting their losses”) and try to claw back using their core strategy over time. Yet, the temptation is to put all the chips on black in an attempt to make the money back quickly. In principle, this is a wretched idea, as the profit from a long series of rational trades over time may be overwhelmed by a single irrational bet.
 

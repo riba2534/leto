@@ -10,7 +10,7 @@ export default defineConfig({
   lang: 'zh-CN',
   cleanUrls: true,
   lastUpdated: true,
-  ignoreDeadLinks: true,
+  ignoreDeadLinks: false,
 
   head: [
     ['link', { rel: 'icon', href: '/favicon.png' }],
