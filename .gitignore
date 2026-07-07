@@ -1,0 +1,17 @@
+# 依赖
+node_modules/
+
+# 构建产物
+site/.vitepress/cache/
+site/.vitepress/dist/
+site/.vitepress/.temp/
+
+# 工作中间文件
+work/
+
+# 原始书籍（太大不入库）
+leto_raw/
+
+# 系统文件
+.DS_Store
+*.log

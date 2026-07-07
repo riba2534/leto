@@ -1,0 +1,309 @@
+/* Leto 投资书籍合集 - 自定义样式 */
+
+:root {
+  --vp-c-brand-1: #b8863f;
+  --vp-c-brand-2: #c99a4f;
+  --vp-c-brand-3: #d4a855;
+  --vp-c-brand-soft: rgba(184, 134, 63, 0.14);
+
+  --vp-font-family-base: 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC',
+    Georgia, 'Times New Roman', serif;
+}
+
+/* 深色模式品牌色微调 */
+.dark {
+  --vp-c-brand-1: #d4a855;
+  --vp-c-brand-2: #c99a4f;
+  --vp-c-brand-3: #b8863f;
+  --vp-c-brand-soft: rgba(212, 168, 85, 0.14);
+}
+
+/* ========== 首页书架卡片 ========== */
+
+.bookshelf {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin: 40px 0;
+}
+
+.book-card {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.book-card:hover {
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 4px 20px rgba(184, 134, 63, 0.15);
+  transform: translateY(-2px);
+}
+
+.book-card__cover {
+  flex-shrink: 0;
+  width: 90px;
+  aspect-ratio: 3 / 4;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--vp-c-bg-elv);
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.book-card__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.book-card:hover .book-card__cover img {
+  transform: scale(1.04);
+}
+
+.book-card__info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.book-card__title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 4px;
+  line-height: 1.4;
+  color: var(--vp-c-text-1);
+}
+
+.book-card__subtitle {
+  font-size: 13px;
+  color: var(--vp-c-text-2);
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
+.book-card__author {
+  font-size: 12px;
+  color: var(--vp-c-text-3);
+  margin: 0;
+}
+
+.book-card__intro {
+  font-size: 13px;
+  color: var(--vp-c-text-2);
+  margin: 8px 0 0;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ========== 书籍落地页 ========== */
+
+.book-header {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 40px;
+  padding: 32px;
+  background: var(--vp-c-bg-soft);
+  border-radius: 16px;
+}
+
+.book-header__cover {
+  flex-shrink: 0;
+  width: 180px;
+  aspect-ratio: 3 / 4;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 4px 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.book-header__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.book-header__info {
+  flex: 1;
+}
+
+.book-header__title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  background: linear-gradient(135deg, var(--vp-c-brand-1), var(--vp-c-brand-3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.book-header__subtitle {
+  font-size: 16px;
+  color: var(--vp-c-text-2);
+  margin: 0 0 16px;
+}
+
+.book-header__meta {
+  font-size: 14px;
+  color: var(--vp-c-text-2);
+  line-height: 1.8;
+}
+
+.book-header__intro {
+  margin-top: 16px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--vp-c-text-1);
+}
+
+/* ========== 阅读进度条 ========== */
+
+.reading-progress {
+  position: fixed;
+  top: var(--vp-nav-height);
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--vp-c-brand-soft);
+  z-index: 30;
+}
+
+.reading-progress__bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--vp-c-brand-1), var(--vp-c-brand-3));
+  transition: width 0.1s ease;
+}
+
+/* ========== 正文排版优化 ========== */
+
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.vp-doc h4 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.vp-doc p {
+  line-height: 1.9;
+  text-align: justify;
+}
+
+.vp-doc blockquote {
+  border-left: 4px solid var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+  padding: 12px 16px;
+  border-radius: 0 8px 8px 0;
+  margin: 16px 0;
+}
+
+.vp-doc blockquote p {
+  margin: 0;
+  color: var(--vp-c-text-2);
+}
+
+/* 脚注样式 */
+.vp-doc .footnote-ref {
+  font-size: 0.85em;
+  vertical-align: super;
+  color: var(--vp-c-brand-1);
+}
+
+.vp-doc .footnotes {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--vp-c-divider);
+  font-size: 14px;
+}
+
+/* 表格样式 */
+.vp-doc table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.vp-doc table th {
+  background: var(--vp-c-bg-soft);
+  font-weight: 600;
+  text-align: left;
+}
+
+.vp-doc table th,
+.vp-doc table td {
+  border: 1px solid var(--vp-c-divider);
+  padding: 10px 14px;
+}
+
+/* ========== 首页 Hero 区 ========== */
+
+.hero-section {
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+
+.hero-title {
+  font-size: 42px;
+  font-weight: 800;
+  margin: 0 0 16px;
+  background: linear-gradient(135deg, #b8863f, #d4a855, #e8c87a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: var(--vp-c-text-2);
+  margin: 0 0 8px;
+}
+
+.hero-desc {
+  font-size: 15px;
+  color: var(--vp-c-text-3);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+/* ========== 响应式 ========== */
+
+@media (max-width: 768px) {
+  .bookshelf {
+    grid-template-columns: 1fr;
+  }
+
+  .book-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .book-header__cover {
+    width: 140px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "leto-investment-books",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "dependencies": {
+    "vitepress": "^1.6.3",
+    "vue": "^3.5.13",
+    "markdown-it-footnote": "^4.0.0",
+    "medium-zoom": "^1.1.0",
+    "@fontsource/noto-serif-sc": "^5.1.1"
+  }
+}
