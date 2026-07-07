@@ -1,4 +1,4 @@
-# 版权信息
+# Copyright
 
 This edition first published 2017
 

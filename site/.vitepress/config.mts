@@ -27,7 +27,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       ...books.map(b => ({
-        text: b.title.length > 10 ? b.title.slice(0, 10) + '…' : b.title,
+        text: b.title,
         link: `/books/${b.slug}/`,
       })),
     ],
