@@ -35,6 +35,7 @@ export default defineConfig({
     sidebar: generateSidebar(),
 
     socialLinks: [
+      { icon: 'x', link: 'https://x.com/riba2534' },
       { icon: 'github', link: 'https://github.com/riba2534/leto' },
     ],
 
